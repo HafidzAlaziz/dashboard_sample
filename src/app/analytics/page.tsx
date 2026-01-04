@@ -1,5 +1,6 @@
 "use client";
 
+import { useMemo } from "react";
 import { DashboardWrapper } from "@/components/layout/DashboardWrapper";
 import { TrafficChart } from "@/components/analytics/TrafficChart";
 import { DeviceStats } from "@/components/analytics/DeviceStats";
