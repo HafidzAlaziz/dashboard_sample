@@ -1,0 +1,68 @@
+import { Product } from "@/store/useCartStore";
+
+export const PRODUCTS: Product[] = [
+    {
+        id: "1",
+        name: "Kopi Arabika Gayo Premium",
+        price: 85000,
+        category: "Makanan & Minuman",
+        image: "/images/products/kopi-gayo.jpg",
+        weight: 250,
+    },
+    {
+        id: "2",
+        name: "Keripik Pisang Coklat Lumer",
+        price: 25000,
+        category: "Cemilan",
+        image: "/images/products/keripik-pisang.jpg",
+        weight: 150,
+    },
+    {
+        id: "3",
+        name: "Tas Anyaman Rotan Bali",
+        price: 150000,
+        category: "Fashion",
+        image: "/images/products/tas-rotan.jpg",
+        weight: 500,
+    },
+    {
+        id: "4",
+        name: "Madu Hutan Asli Sumbawa",
+        price: 120000,
+        category: "Kesehatan",
+        image: "/images/products/madu-hutan.jpg",
+        weight: 600,
+    },
+    {
+        id: "5",
+        name: "Kain Batik Tulis Solo",
+        price: 350000,
+        category: "Fashion",
+        image: "/images/products/batik-solo.jpg",
+        weight: 300,
+    },
+    {
+        id: "6",
+        name: "Sambal Bawang Bu Rudy",
+        price: 35000,
+        category: "Makanan",
+        image: "/images/products/sambal-bawang.jpg",
+        weight: 200,
+    },
+    {
+        id: "7",
+        name: "Dompet Kulit Asli Garut",
+        price: 180000,
+        category: "Aksesoris",
+        image: "/images/products/dompet-kulit.jpg",
+        weight: 150,
+    },
+    {
+        id: "8",
+        name: "Minyak Kemiri Penumbuh Rambut",
+        price: 65000,
+        category: "Kesehatan",
+        image: "/images/products/minyak-kemiri.jpg",
+        weight: 100,
+    },
+];

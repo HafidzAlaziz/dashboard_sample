@@ -1,0 +1,207 @@
+@import "tailwindcss";
+
+@variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+
+  /* Mapping for legacy/utility usage */
+  --background: var(--background);
+  --foreground: var(--foreground);
+
+  /* User requested specific colors */
+  --color-slate-900: #0f172a;
+  --color-indigo-600: #4f46e5;
+  --color-emerald-500: #10b981;
+
+  --radius-lg: var(--radius);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-sm: calc(var(--radius) - 4px);
+}
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  /* Slate 900 for text in light mode */
+
+  --card: #ffffff;
+  --card-foreground: #0f172a;
+
+  --popover: #ffffff;
+  --popover-foreground: #0f172a;
+
+  --primary: #4f46e5;
+  /* Indigo 600 */
+  --primary-foreground: #ffffff;
+
+  --secondary: #f1f5f9;
+  /* Slate 100 */
+  --secondary-foreground: #0f172a;
+
+  --muted: #f1f5f9;
+  /* Slate 100 */
+  --muted-foreground: #64748b;
+  /* Slate 500 */
+
+  --accent: #f1f5f9;
+  /* Slate 100 */
+  --accent-foreground: #0f172a;
+
+  --destructive: #ef4444;
+  /* Red 500 */
+  --destructive-foreground: #ffffff;
+
+  --border: #e2e8f0;
+  /* Slate 200 */
+  --input: #e2e8f0;
+  --ring: #4f46e5;
+
+  --radius: 0.75rem;
+  /* rounded-xl */
+}
+
+.dark {
+  --background: #0f172a;
+  /* Slate 900 Main Background */
+  --foreground: #f8fafc;
+  /* Slate 50 */
+
+  --card: #1e293b;
+  /* Slate 800 - Slightly lighter for cards */
+  --card-foreground: #f8fafc;
+
+  --popover: #0f172a;
+  --popover-foreground: #f8fafc;
+
+  --primary: #6366f1;
+  /* Indigo 500 for dark mode accessibility */
+  --primary-foreground: #ffffff;
+
+  --secondary: #1e293b;
+  /* Slate 800 */
+  --secondary-foreground: #f8fafc;
+
+  --muted: #1e293b;
+  /* Slate 800 */
+  --muted-foreground: #94a3b8;
+  /* Slate 400 */
+
+  --accent: #1e293b;
+  /* Slate 800 */
+  --accent-foreground: #f8fafc;
+
+  --destructive: #7f1d1d;
+  /* Red 900 */
+  --destructive-foreground: #f8fafc;
+
+  --border: #334155;
+  /* Slate 700 */
+  --input: #334155;
+  --ring: #6366f1;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* Compact Mode Styles - Enhanced for Visibility */
+.compact-mode {
+  font-size: 13px;
+}
+
+.compact-mode p,
+.compact-mode span,
+.compact-mode label,
+.compact-mode div,
+.compact-mode button,
+.compact-mode input {
+  line-height: normal !important;
+}
+
+.compact-mode .p-4 {
+  padding: 0.5rem !important;
+}
+
+.compact-mode .p-6 {
+  padding: 0.75rem !important;
+}
+
+.compact-mode .p-8 {
+  padding: 1rem !important;
+}
+
+.compact-mode .px-4 {
+  padding-left: 0.5rem !important;
+  padding-right: 0.5rem !important;
+}
+
+.compact-mode .py-4 {
+  padding-top: 0.5rem !important;
+  padding-bottom: 0.5rem !important;
+}
+
+.compact-mode .gap-4 {
+  gap: 0.5rem !important;
+}
+
+.compact-mode .gap-6 {
+  gap: 0.75rem !important;
+}
+
+.compact-mode .mb-8 {
+  margin-bottom: 0.75rem !important;
+}
+
+.compact-mode .mb-4 {
+  margin-bottom: 0.5rem !important;
+}
+
+.compact-mode .space-y-2> :not([hidden])~ :not([hidden]) {
+  margin-top: 0.25rem !important;
+}
+
+.compact-mode .space-y-4> :not([hidden])~ :not([hidden]) {
+  margin-top: 0.5rem !important;
+}
+
+.compact-mode .space-y-6> :not([hidden])~ :not([hidden]) {
+  margin-top: 0.75rem !important;
+}
+
+.compact-mode .space-y-8> :not([hidden])~ :not([hidden]) {
+  margin-top: 1rem !important;
+}
+
+.compact-mode .h-16 {
+  height: 3rem !important;
+}
+
+.compact-mode .py-12 {
+  padding-top: 1rem !important;
+  padding-bottom: 1rem !important;
+}
+
+.compact-mode .py-10 {
+  padding-top: 0.75rem !important;
+  padding-bottom: 0.75rem !important;
+}
